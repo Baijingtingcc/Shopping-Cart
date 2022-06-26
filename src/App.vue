@@ -3,7 +3,7 @@
     <!-- 除了驼峰, 还可以使用-转换链接 -->
     <MyHeader title="购物车" background="pink" color="black" />
     <MyGoods v-for="item in goodsList" :key="item.goods_id" :goods="item" />
-    <MyFooter />
+    <MyFooter :goodsList="goodsList" />
   </div>
 </template>
 
