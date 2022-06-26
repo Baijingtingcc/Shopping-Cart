@@ -15,14 +15,23 @@
       <div class="top">商品名字</div>
       <div class="bottom">
         <span class="price">¥ 100</span>
-        <span> 数量组件 </span>
+        <span> <MyCount /> </span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import MyCount from '@/components/MyCount'
+export default {
+  components: { MyCount },
+  props: {
+    goods: {
+      type: Object,
+      required: true
+    }
+  }
+}
 </script>
 
 <style lang="less" scoped>

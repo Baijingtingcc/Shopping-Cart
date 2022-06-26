@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div class="app">
     <!-- 除了驼峰, 还可以使用-转换链接 -->
-    <MyHeader />
-    <MyGoods />
+    <MyHeader title="购物车" background="pink" color="black" />
+    <MyGoods v-for="item in goodsList" :key="item.goods_id" :goods="item" />
     <MyFooter />
   </div>
 </template>
